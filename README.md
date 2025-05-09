@@ -1,4 +1,4 @@
-# NomeDoProjeto
+# ProjetoJava
 
 Projeto criado para aprimoramento em Java e controle de versão com Git/GitHub.
 
