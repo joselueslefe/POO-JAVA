@@ -15,11 +15,14 @@ public class Test {
         p2.profissao = "Engenheira de Software";
         p2.email = "ferkpr@gmail.com";
 
-            p1.Dizeroi();
+
+        p1.Dizeroi();
         System.out.println("Seu nome é: " + p1.nome + "," + "sua idade é: " + p1.idade +","
                 + "sua profissão é: " + p1.profissao + "," + "seu email é: " + p1.email);
         System.out.println("__________________________________________________________________");
-            p2.Dizeroi();
+
+
+        p2.Dizeroi();
         System.out.println("Seu nome é: " + p2.nome + "," + "sua idade é: " + p2.idade + ","
                 + "sua profissão é: " + p2.profissao + "," + "seu email é: " + p2.email);
         System.out.println("__________________________________________________________________");
