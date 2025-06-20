@@ -1,4 +1,4 @@
-package Carro;
+package JavaPOO;
 
 public class Carro {
     String nome;

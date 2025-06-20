@@ -1,4 +1,4 @@
-package Carro;
+package JavaPOO;
 
 public class Pessoa {
     String nome;
