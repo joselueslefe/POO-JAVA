@@ -5,4 +5,8 @@ public class Pessoa {
     int idade;
     String email;
     String profissao;
+
+    void Dizeroi(){
+        System.out.println("Olá, meu nome é " + nome);
+    }
 }
