@@ -44,38 +44,97 @@ package ex.java;
 //3️⃣ Sair
 
 
+//import java.util.ArrayList;
+//import java.util.Scanner;
+
+//public class Cadastro {
+//    public static void main(String[] args) {
+//      Scanner scanner = new Scanner(System.in);
+//        ArrayList<String> usuarios = new ArrayList<>();
+
+//        System.out.println("Olá, Bem-Vindo à nossa rede!");
+//        System.out.print("Digite seu nome: ");
+//        String nom = scanner.nextLine();
+//
+//        System.out.println("Olá " + nom + ", deseja cadastrar usuários?");
+//        System.out.println("Digite os nomes de usuários e digite 'OK' ou 'Não' para finalizar:");
+//
+//        String usuario = scanner.nextLine(); // primeira leitura
+//
+//        while (!usuario.equalsIgnoreCase("OK") && !usuario.equalsIgnoreCase("Não")) {
+//            usuarios.add(usuario);
+//            usuario = scanner.nextLine(); // continua lendo até ser OK ou Não
+//        }
+//
+//        System.out.println("\nUsuários cadastrados:");
+//        if (usuarios.isEmpty()) {
+//            System.out.println("Nenhum usuário foi cadastrado.");
+//        } else {
+//            for (String u : usuarios) {
+//                System.out.println("- " + u);
+//            }
+//        }
+//
+//        scanner.close();
+//    }
+//}
+//  * OUTRA FORMA MAIS DETALHADA
+
+
+//1️⃣ Cadastrar novo usuário
+//
+//2️⃣ Listar usuários cadastrados
+//
+//3️⃣ Sair
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Cadastro {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<String> usuarios = new ArrayList<>();
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            ArrayList <String> nomes = new ArrayList<>();
+            ArrayList <String> emails = new ArrayList<>();
 
-        System.out.println("Olá, Bem-Vindo à nossa rede!");
-        System.out.print("Digite seu nome: ");
-        String nome = scanner.nextLine();
+            boolean ex = true;
 
-        System.out.println("Olá " + nome + ", deseja cadastrar usuários?");
-        System.out.println("Digite os nomes de usuários e digite 'OK' ou 'Não' para finalizar:");
+            while (ex) {
+                System.out.println("=====MENU=====");
+                System.out.println("1. CADASTRAR NOVO USUÁRIO");
+                System.out.println("2. LISTAR USUÁRIOS CADASTRADOS");
+                System.out.println("3. SAIR");
+                System.out.println("ESCOLHA");
+                int o = scanner.nextInt();
+                scanner.nextLine();
+                switch (o) {
+                    case 1:
+                    System.out.print("Digite o nome: ");
+                    String nome = scanner.nextLine();
+                    System.out.print("Digite o e-mail: ");
+                    String email = scanner.nextLine();
 
-        String usuario = scanner.nextLine(); // primeira leitura
+                    nomes.add(nome);
+                    emails.add(email);
 
-        while (!usuario.equalsIgnoreCase("OK") && !usuario.equalsIgnoreCase("Não")) {
-            usuarios.add(usuario);
-            usuario = scanner.nextLine(); // continua lendo até ser OK ou Não
-        }
+                    System.out.println("Usuário cadastrado com sucesso!");
+                    break;
 
-        System.out.println("\nUsuários cadastrados:");
-        if (usuarios.isEmpty()) {
-            System.out.println("Nenhum usuário foi cadastrado.");
-        } else {
-            for (String u : usuarios) {
-                System.out.println("- " + u);
+                    case 2:
+                    System.out.println("==LISTA DE USUÁRIOS== ");
+                    if (nomes.isEmpty()) {
+                        System.out.println("Nenhum usuário cadastro! ");
+                    } else for (int i = 0; i < nomes.size(); i++) {
+                        System.out.println((i + 1) + " - " + nomes.get(i) + " | " + emails.get(i));
+                    }
+                    case 3:
+                        ex = false ;
+                        System.out.println("Encerrando o programa... ");
+                    default:
+                        System.out.println("Opção inválida. Tente novamente.");
+
+                }
+
             }
+            scanner.close();
         }
-
-        scanner.close();
-    }
 }
-
