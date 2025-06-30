@@ -35,13 +35,6 @@ package ex.java;
 //       scanner.close();
 //   }
 //}
-//Exibe um menu com opções:
-//
-//1️⃣ Cadastrar novo usuário
-//
-//2️⃣ Listar usuários cadastrados
-//
-//3️⃣ Sair
 
 
 //import java.util.ArrayList;
